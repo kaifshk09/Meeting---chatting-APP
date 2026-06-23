@@ -1,0 +1,181 @@
+.landingPageContainer {
+  width: 100vw;
+  height: 100vh;
+  background: url("/public/background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+}
+
+.landingPageContainer nav {
+  padding-inline: 1.2rem;
+  padding-block: 1.6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.landingPageContainer nav h2 {
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
+.landingPageContainer nav .navlist {
+  display: flex;
+  gap: 1.6rem;
+  align-items: center;
+}
+
+.landingNav .navHeader h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.navLink {
+  appearance: none;
+  border: 0;
+  background: transparent;
+  color: #fff;
+  font: inherit;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 10px 14px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: transform 180ms ease, background-color 180ms ease, box-shadow 180ms ease, color 180ms ease;
+  position: relative;
+}
+
+.navLink::after {
+  content: "";
+  position: absolute;
+  left: 14px;
+  right: 14px;
+  bottom: 7px;
+  height: 2px;
+  background: linear-gradient(90deg, rgba(255,152,57,0), rgba(255,152,57,1), rgba(255,152,57,0));
+  opacity: 0;
+  transform: scaleX(0.6);
+  transform-origin: center;
+  transition: opacity 180ms ease, transform 200ms ease;
+}
+
+.navLink:hover {
+  background: rgba(255,152,57,0.12);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.25);
+}
+
+.navLink:hover::after {
+  opacity: 1;
+  transform: scaleX(1);
+}
+
+.navLink:focus-visible {
+  outline: 3px solid rgba(255,152,57,0.35);
+  outline-offset: 2px;
+}
+
+.landingMainContainer {
+  display: flex;
+  justify-content: space-between;
+  padding-inline: 3rem;
+  height: 80vh;
+  align-items: center;
+}
+
+.landingMainContainer>div:nth-child(1) {
+  font-size: 2.2rem;
+}
+
+.landingMainContainer>div:nth-child(1) .ctaButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1.9rem;
+
+  background: linear-gradient(135deg, #FF9839, #D97500);
+  width: fit-content;
+  padding: 1rem 1.6rem;
+  border-radius: 999px;
+
+  box-shadow: 0 14px 34px rgba(0,0,0,0.25);
+  transition: transform 180ms ease, box-shadow 180ms ease, filter 180ms ease;
+
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.35rem;
+  font-weight: 800;
+  letter-spacing: 0.2px;
+}
+
+.landingMainContainer>div:nth-child(1) .ctaButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 44px rgba(0,0,0,0.32);
+  filter: saturate(1.05);
+}
+
+.landingMainContainer>div:nth-child(1) .ctaButton:focus-visible {
+  outline: 3px solid rgba(255,152,57,0.45);
+  outline-offset: 3px;
+  border-radius: 999px;
+}
+
+.landingMainContainer>div:nth-child(2) img {
+  height: 70vh;
+  width: auto;
+}
+
+.navBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 24px;
+  background: rgba(15, 23, 42, 0.72);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  margin: 18px 20px 0;
+  color: #fff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.navBar h2 {
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+
+.navBar p {
+  margin: 0 10px;
+  font-weight: 600;
+}
+
+.meetContainer {
+  display: flex;
+  padding-inline: 20px;
+  height: 80vh;
+  gap: 10vw;
+  justify-content: center;
+}
+
+
+
+.leftPanel {
+  height: 100%;
+  display: flex;
+  align-items: center;
+
+}
+
+.rightPanel {
+  display: flex;
+  align-items: center;
+}
+
+.rightPanel > img {
+  width: 30vw;
+  height: auto;
+  border-radius: 20px;
+}
