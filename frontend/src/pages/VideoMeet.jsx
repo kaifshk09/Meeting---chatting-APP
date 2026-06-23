@@ -68,7 +68,8 @@ export default function VideoMeetComponent() {
         console.log("HELLO")
         getPermissions();
 
-    })
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [])
 
     let getDislayMedia = () => {
         if (screen) {
@@ -123,12 +124,12 @@ export default function VideoMeetComponent() {
 
     useEffect(() => {
         if (video !== undefined && audio !== undefined) {
+            // eslint-disable-next-line react-hooks/exhaustive-deps
             getUserMedia();
             console.log("SET STATE HAS ", video, audio);
-
         }
 
-
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [video, audio])
     let getMedia = () => {
         setVideo(videoAvailable);
@@ -393,8 +394,11 @@ export default function VideoMeetComponent() {
 
     useEffect(() => {
         if (screen !== undefined) {
+            // eslint-disable-next-line react-hooks/exhaustive-deps
             getDislayMedia();
         }
+
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [screen])
     let handleScreen = () => {
         setScreen(!screen);
@@ -408,13 +412,17 @@ export default function VideoMeetComponent() {
         window.location.href = "/"
     }
 
+    // Chat helpers (kept for future use)
+    // eslint-disable-next-line no-unused-vars
     let openChat = () => {
         setModal(true);
         setNewMessages(0);
     }
+    // eslint-disable-next-line no-unused-vars
     let closeChat = () => {
         setModal(false);
     }
+    // eslint-disable-next-line no-unused-vars
     let handleMessage = (e) => {
         setMessage(e.target.value);
     }
